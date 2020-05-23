@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: replica-set-demo
+spec:
+  replicas: 3 # no of pods to keep running
+  selector:
+    matchLabels:
+      server: nginx # should match with spec.template.labels
+  template:
+    metadata:
+      labels:
+        server: nginx
+    spec:
+      containers:
+      - name: nginx-demo-container
+        image: nginx:stable-alpine

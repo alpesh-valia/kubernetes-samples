@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-demo-pod-1
+  labels:
+    server: nginx
+spec:
+  containers:
+  - name: nginx-demo-container-1
+    image: nginx:stable-alpine
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-demo-pod-2
+  labels:
+    server: nginx
+spec:
+  containers:
+  - name: nginx-demo-container-2
+    image: nginx:stable-alpine
